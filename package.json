@@ -47,10 +47,21 @@
     "build": "webpack --config ./config/webpack.config.js --mode production",
     "server": "nodemon src/server/server.js  --exec babel-node",
     "dev": "NODE_ENV=development concurrently \"npm run client\" \"npm run server\"",
-    "start": "NODE_ENV=production npm run build && npm run server"
+    "start": "NODE_ENV=production npm run build && npm run server",
+    "precommit": "lint-staged",
+    "lint": "eslint src --fix -c .eslintrc.json 'src/**/*.js'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
