@@ -42,7 +42,7 @@
     "start": "NODE_ENV=production npm run build && npm run server",
     "precommit": "lint-staged",
     "lint": "eslint src --fix -c .eslintrc.json 'src/**/*.js'",
-    "pre-commit": [
+    "pre-commit":  [
       "lint-staged"
     ],
     "lint-staged":　{
