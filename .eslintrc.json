@@ -19,7 +19,8 @@
       "react/jsx-uses-react": 2,
       "react/jsx-uses-vars": 2,
       "react/react-in-jsx-scope": 2,
-      "no-console": 0
+      "no-console": 0,
+      "space-in-parens": ["error", "always"]
     },
     "extends": [
       "eslint:recommended",
