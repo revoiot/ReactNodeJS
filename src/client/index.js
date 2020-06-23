@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // };
 
 // Spaceを開けてlintエラーを起こす
-fetch(   '/api/'   ).then(response => {
+fetch('/api/').then(response => {
   console.log(response.json());
 })
 
